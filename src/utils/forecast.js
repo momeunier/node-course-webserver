@@ -8,7 +8,7 @@ const forecast = (lat, long, callback) => {
         } else if (body.success === false) {
             callback('location not found by the weather service', undefined)
         } else {
-            callback(undefined, 'It is currently ' + body.current.temperature + ' degrees C. It feels like ' + body.current.feelslike + ' degrees C.')
+            callback(undefined, 'It is currently ' + body.current.temperature + ' degrees C. It feels like ' + body.current.feelslike + ' degrees C. The wind is blowing ' + body.current.wind_speed + 'm/s ' + body.current.wind_dir)
         }
     })
 
